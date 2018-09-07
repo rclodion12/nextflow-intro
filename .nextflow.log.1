@@ -1,0 +1,73 @@
+sept.-07 17:15:41.176 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 17:15:41.212 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 17:15:41.212 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/rclodion/miniconda3/bin/nextflow run coverage.nf -resume
+sept.-07 17:15:41.259 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 17:15:41.266 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [prickly_waddington] - revision: 6c75431fd5
+sept.-07 17:15:41.342 [main] DEBUG nextflow.Session - Session uuid: d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73
+sept.-07 17:15:41.342 [main] DEBUG nextflow.Session - Run name: prickly_waddington
+sept.-07 17:15:41.343 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 17:15:41.358 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 2518@lk-525a-wle-05 [172.20.24.226]
+  CPUs: 4 - Mem: 7,7 GB (230 MB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 17:15:41.408 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 17:15:41.527 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 17:15:41.533 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 17:15:41.534 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 17:15:41.727 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 17:15:41.742 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 17:15:41.950 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:15:41.950 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:15:41.954 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:15:41.956 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 17:15:41.959 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 17:15:41.962 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 17:15:41.963 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 17:15:41.965 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 17:15:41.996 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 17:15:41.998 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 17:15:42.021 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:15:42.021 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:15:42.021 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:15:42.022 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_view)
+sept.-07 17:15:42.022 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_view -- maxForks: 4
+sept.-07 17:15:42.034 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:15:42.034 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:15:42.034 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:15:42.035 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_sort)
+sept.-07 17:15:42.035 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_sort -- maxForks: 4
+sept.-07 17:15:42.039 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:15:42.039 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:15:42.039 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:15:42.040 [main] DEBUG nextflow.Session - >>> barrier register (process: bedtools)
+sept.-07 17:15:42.040 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > bedtools -- maxForks: 4
+sept.-07 17:15:42.048 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:15:42.049 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:15:42.049 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:15:42.050 [main] DEBUG nextflow.Session - >>> barrier register (process: coverageStats)
+sept.-07 17:15:42.050 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > coverageStats -- maxForks: 4
+sept.-07 17:15:42.053 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 17:15:42.054 [main] DEBUG nextflow.Session - Session await
+sept.-07 17:15:42.160 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [f5/a84428] Cached process > mapping (1)
+sept.-07 17:15:42.178 [Actor Thread 6] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+sept.-07 17:15:42.198 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [2f/ce7500] Cached process > samtools_view (1)
+sept.-07 17:15:42.202 [Actor Thread 6] DEBUG nextflow.Session - <<< barrier arrive (process: samtools_view)
+sept.-07 17:15:42.223 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [4a/b2eb24] Cached process > samtools_sort (1)
+sept.-07 17:15:42.224 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: samtools_sort)
+sept.-07 17:15:42.235 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [31/cabc75] Cached process > bedtools (1)
+sept.-07 17:15:42.238 [Actor Thread 6] DEBUG nextflow.Session - <<< barrier arrive (process: bedtools)
+sept.-07 17:15:42.279 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 17:15:42.283 [Task submitter] INFO  nextflow.Session - [34/8d8736] Submitted process > coverageStats (1)
+sept.-07 17:15:47.093 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: coverageStats (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/34/8d873691a39be479e1a2d74d8f3aae]
+sept.-07 17:15:47.098 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `results` -- Initialise it to a default value eg. `params.results = some_value`
+sept.-07 17:15:47.103 [Actor Thread 6] DEBUG nextflow.Session - <<< barrier arrive (process: coverageStats)
+sept.-07 17:15:47.103 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 17:15:47.105 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 17:15:47.106 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 17:15:47.115 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=4; succeedDuration=4.7s; failedDuration=0ms; cachedDuration=13.5s]
+sept.-07 17:15:47.129 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 17:15:47.141 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

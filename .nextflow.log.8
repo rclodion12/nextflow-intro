@@ -1,0 +1,77 @@
+sept.-07 16:41:12.057 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:41:12.091 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:41:12.091 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/rclodion/miniconda3/bin/nextflow run coverage.nf
+sept.-07 16:41:12.132 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 16:41:12.138 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [awesome_gautier] - revision: d929b6dcbf
+sept.-07 16:41:12.211 [main] DEBUG nextflow.Session - Session uuid: 419ea5c0-3a11-488b-b97e-5b609671c450
+sept.-07 16:41:12.211 [main] DEBUG nextflow.Session - Run name: awesome_gautier
+sept.-07 16:41:12.212 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 16:41:12.224 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 1312@lk-525a-wle-05 [172.20.24.226]
+  CPUs: 4 - Mem: 7,7 GB (836,2 MB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 16:41:12.272 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 16:41:12.373 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 16:41:12.378 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 16:41:12.378 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 16:41:12.557 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 16:41:12.575 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 16:41:12.715 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:41:12.716 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:41:12.719 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:41:12.721 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 16:41:12.724 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 16:41:12.726 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 16:41:12.727 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 16:41:12.728 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 16:41:12.837 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 16:41:12.839 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 16:41:12.854 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:41:12.854 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:41:12.854 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:41:12.855 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_view)
+sept.-07 16:41:12.855 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_view -- maxForks: 4
+sept.-07 16:41:12.860 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 16:41:12.860 [main] DEBUG nextflow.Session - Session await
+sept.-07 16:41:12.959 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 16:41:12.963 [Task submitter] INFO  nextflow.Session - [ef/49f40d] Submitted process > mapping (1)
+sept.-07 16:41:18.441 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: mapping (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/ef/49f40d7483defa688b886b878a848b]
+sept.-07 16:41:18.454 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+sept.-07 16:41:18.465 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 16:41:18.469 [Task submitter] INFO  nextflow.Session - [ea/666192] Submitted process > samtools_view (1)
+sept.-07 16:41:18.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: samtools_view (1); status: COMPLETED; exit: 1; error: -; workDir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/ea/6661927c150d0db79b41daf413d4e2]
+sept.-07 16:41:18.554 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'samtools_view (1)'
+
+Caused by:
+  Process `samtools_view (1)` terminated with an error exit status (1)
+
+Command executed:
+
+  samtools view -S -@ 3 -b -o ERR036019samp.bam ERR036019samp.sam.sam
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  [E::hts_open_format] Failed to open file ERR036019samp.sam.sam
+  samtools view: failed to open "ERR036019samp.sam.sam" for reading: No such file or directory
+
+Work dir:
+  /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/ea/6661927c150d0db79b41daf413d4e2
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+sept.-07 16:41:18.557 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: samtools_view)
+sept.-07 16:41:18.558 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 16:41:18.560 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `samtools_view (1)` terminated with an error exit status (1)
+sept.-07 16:41:18.576 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 16:41:18.582 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 16:41:18.585 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=5.4s; failedDuration=0ms; cachedDuration=0ms]
+sept.-07 16:41:18.594 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 16:41:18.606 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

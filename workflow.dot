@@ -1,0 +1,10 @@
+digraph "workflow" {
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromFilePairs"];
+p1 [label="mapping"];
+p0 -> p1 [label="readChannel"];
+
+p1 [label="mapping"];
+p2 [shape=point];
+p1 -> p2 [label="mappChannel"];
+
+}

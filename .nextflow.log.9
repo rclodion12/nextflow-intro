@@ -1,0 +1,75 @@
+sept.-07 16:39:55.687 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:39:55.743 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:39:55.743 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/rclodion/miniconda3/bin/nextflow run coverage.nf -resume
+sept.-07 16:39:55.811 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 16:39:55.818 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [adoring_fourier] - revision: d929b6dcbf
+sept.-07 16:39:55.896 [main] DEBUG nextflow.Session - Session uuid: 8942bb27-adbf-4d21-ae84-785c4226b493
+sept.-07 16:39:55.896 [main] DEBUG nextflow.Session - Run name: adoring_fourier
+sept.-07 16:39:55.897 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 16:39:55.911 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 1220@lk-525a-wle-05 [172.20.24.226]
+  CPUs: 4 - Mem: 7,7 GB (771,6 MB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 16:39:55.969 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 16:39:56.089 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 16:39:56.095 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 16:39:56.096 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 16:39:56.275 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 16:39:56.288 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 16:39:56.495 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:39:56.495 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:39:56.499 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:39:56.500 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 16:39:56.504 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 16:39:56.507 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 16:39:56.507 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 16:39:56.509 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 16:39:56.538 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 16:39:56.540 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 16:39:56.558 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:39:56.558 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:39:56.558 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:39:56.558 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_view)
+sept.-07 16:39:56.559 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_view -- maxForks: 4
+sept.-07 16:39:56.561 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 16:39:56.561 [main] DEBUG nextflow.Session - Session await
+sept.-07 16:39:56.703 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [cc/35f81f] Cached process > mapping (1)
+sept.-07 16:39:56.719 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+sept.-07 16:39:56.770 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 16:39:56.775 [Task submitter] INFO  nextflow.Session - [dd/c6a6f2] Submitted process > samtools_view (1)
+sept.-07 16:39:57.164 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: samtools_view (1); status: COMPLETED; exit: 1; error: -; workDir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/dd/c6a6f24cee05cedf6007144a42159d]
+sept.-07 16:39:57.213 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'samtools_view (1)'
+
+Caused by:
+  Process `samtools_view (1)` terminated with an error exit status (1)
+
+Command executed:
+
+  samtools view -S -@ 3 -b -o ERR036019samp.bam ERR036019samp.sam.sam
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  [E::hts_open_format] Failed to open file ERR036019samp.sam.sam
+  samtools view: failed to open "ERR036019samp.sam.sam" for reading: No such file or directory
+
+Work dir:
+  /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work/dd/c6a6f24cee05cedf6007144a42159d
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+sept.-07 16:39:57.219 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: samtools_view)
+sept.-07 16:39:57.219 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 16:39:57.223 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `samtools_view (1)` terminated with an error exit status (1)
+sept.-07 16:39:57.253 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 16:39:57.253 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 16:39:57.272 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=1; succeedDuration=0ms; failedDuration=338ms; cachedDuration=5.3s]
+sept.-07 16:39:57.293 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 16:39:57.307 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,24 @@
+2018-09-07 15:24:53	-	drunk_raman	-	00000000000000000000000000000000	d75f02ea-b664-4968-8b9d-02624e4e1ab1	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 15:33:25	-	distracted_ptolemy	-	d20dde124d2f00d4147bd6f29773a765	cd3600e6-b501-42ab-ae91-09c4fe6dba8e	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 15:34:47	667ms	lonely_monod	OK	0e82fbe6b8130ce54454ba14a3f5a0eb	cf1bf568-86f6-4f09-88ca-0b76174673af	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:14:21	-	lethal_lorenz	-	2e3e3f1177201de277c8e69e21ddd560	523363d4-d161-4c8a-af48-3eca17f542f4	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:17:25	2s	ridiculous_hawking	ERR	d94b8975c6f14745e18613b53729eae0	1484394c-c3ee-4486-8068-6ab1142f7a12	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:18:04	1.8s	awesome_sanger	ERR	d94b8975c6f14745e18613b53729eae0	0b0e4f11-f0e3-41d6-9677-194548febdc3	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:18:33	1.4s	pedantic_yonath	ERR	6fcef88fcfe9a7a32f4882b2414d5e6d	ddd54cd2-5347-48b0-b26b-8969e9ffb6ce	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:20:28	2s	serene_morse	ERR	6fcef88fcfe9a7a32f4882b2414d5e6d	adc987b8-1681-44ab-9b53-2adb86cc185f	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:20:42	1.4s	tender_pesquet	ERR	6fcef88fcfe9a7a32f4882b2414d5e6d	230908bc-4643-4283-b7f3-439b25881b02	nextflow run coverage.nf
+2018-09-07 16:21:16	7s	nasty_pike	OK	8bfafd0dc50b5c37b4a762b566554d27	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:36:43	-	extravagant_bardeen	-	388f8ef8b25edd693ee2385bf1c97036	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -resume
+2018-09-07 16:37:34	-	nostalgic_wing	-	48d8ed38c6fb994178b769db72edf05b	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -resume
+2018-09-07 16:38:05	-	nostalgic_bartik	-	e6e92bf309b6b2d9dfe8141b06688eb9	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -resume
+2018-09-07 16:38:23	1.8s	furious_bardeen	ERR	d929b6dcbfbebcc1f299175bedd23a19	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -resume
+2018-09-07 16:39:55	2.3s	adoring_fourier	ERR	d929b6dcbfbebcc1f299175bedd23a19	8942bb27-adbf-4d21-ae84-785c4226b493	nextflow run coverage.nf -resume
+2018-09-07 16:41:12	6.6s	awesome_gautier	ERR	d929b6dcbfbebcc1f299175bedd23a19	419ea5c0-3a11-488b-b97e-5b609671c450	nextflow run coverage.nf
+2018-09-07 16:41:59	7.3s	lethal_borg	OK	03a2f0a03b842aae1e427a0cfbc34f28	a066b044-6750-43a5-9d14-7f2b97fd5c33	nextflow run coverage.nf
+2018-09-07 16:43:28	7.8s	suspicious_ampere	OK	03a2f0a03b842aae1e427a0cfbc34f28	fe0050b9-f1b4-4dc6-a0b6-59d4a50416f6	nextflow run coverage.nf
+2018-09-07 16:46:16	7.7s	elegant_sax	OK	03a2f0a03b842aae1e427a0cfbc34f28	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf
+2018-09-07 16:54:23	1.9s	sharp_hamilton	OK	31f6a0e08fd9a5aa25f19634c80dc29c	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf -resume
+2018-09-07 17:01:00	-	sharp_shockley	-	a4c5bc247803d862ccf134094878126b	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf -resume
+2018-09-07 17:01:28	8.6s	kickass_blackwell	OK	5f95034cd6f9ea5c89645a4e0a9f9b5a	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf -resume
+2018-09-07 17:15:41	6.1s	prickly_waddington	OK	6c75431fd56675725e0f329a5a665481	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf -resume
+2018-09-07 17:16:46	2.3s	curious_dubinsky	OK	6c75431fd56675725e0f329a5a665481	d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73	nextflow run coverage.nf -resume -with-report

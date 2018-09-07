@@ -1,0 +1,81 @@
+sept.-07 17:00:59.939 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 17:00:59.974 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 17:00:59.974 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/rclodion/miniconda3/bin/nextflow run coverage.nf -resume
+sept.-07 17:01:00.035 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 17:01:00.043 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [sharp_shockley] - revision: a4c5bc2478
+sept.-07 17:01:00.122 [main] DEBUG nextflow.Session - Session uuid: d6d5b4ed-a9ec-452f-b6e4-f65a465c7b73
+sept.-07 17:01:00.123 [main] DEBUG nextflow.Session - Run name: sharp_shockley
+sept.-07 17:01:00.123 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 17:01:00.138 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 2190@lk-525a-wle-05 [172.20.24.226]
+  CPUs: 4 - Mem: 7,7 GB (627,2 MB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 17:01:00.195 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 17:01:00.305 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 17:01:00.311 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 17:01:00.312 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 17:01:00.516 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 17:01:00.531 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/rclodion/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 17:01:00.738 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:01:00.738 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:01:00.742 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:01:00.743 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 17:01:00.747 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 17:01:00.749 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 17:01:00.750 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 17:01:00.753 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 17:01:00.781 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 17:01:00.783 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 17:01:00.802 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:01:00.803 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:01:00.803 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:01:00.803 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_view)
+sept.-07 17:01:00.804 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_view -- maxForks: 4
+sept.-07 17:01:00.809 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:01:00.809 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:01:00.810 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:01:00.810 [main] DEBUG nextflow.Session - >>> barrier register (process: samtools_sort)
+sept.-07 17:01:00.810 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > samtools_sort -- maxForks: 4
+sept.-07 17:01:00.815 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 17:01:00.816 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 17:01:00.823 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 17:01:00.824 [main] DEBUG nextflow.Session - >>> barrier register (process: bedtools)
+sept.-07 17:01:00.824 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > bedtools -- maxForks: 4
+sept.-07 17:01:00.834 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: s for class: _nf_script_6d734765
+sept.-07 17:01:00.852 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 17:01:00.868 [main] DEBUG nextflow.Session - The following nodes are still active:
+[process] mapping
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] samtools_view
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] samtools_sort
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] bedtools
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+sept.-07 17:01:00.926 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: s for class: _nf_script_6d734765
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:66)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:310)
+	at _nf_script_6d734765.run(_nf_script_6d734765:67)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:379)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:168)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:235)
+	at nextflow.cli.Launcher.run(Launcher.groovy:432)
+	at nextflow.cli.Launcher.main(Launcher.groovy:590)
